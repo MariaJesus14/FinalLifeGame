@@ -12,6 +12,8 @@ public class Matrix {
     private static String[][] matrixGame;
     private static String[][] matrixClone;
     private  static int[] arrayDatos = new int[7];
+
+    
  /*
  * Matrix es un metodo constructor que esta vacio
  * @return no retorna nada
