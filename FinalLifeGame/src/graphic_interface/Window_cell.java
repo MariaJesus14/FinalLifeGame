@@ -81,6 +81,7 @@ public void showGame (){
                             Matrix.matrixClone();
                             Generations.addGenerations(generationsCount, Matrix.printMatrix());
                             generationsCount +=1;
+                            showGame();
                         } while (generationsCount <= 19);
                     }
                     

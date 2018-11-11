@@ -91,6 +91,29 @@ public class Matrix {
         }
     }
     
+    public static int randomRow (){
+        int ramdom = (int)(Math.random() * matrixLenght()+0);
+        return ramdom;
+    }
+    
+    public static int randomColumn (){
+        int ramdom = (int)(Math.random() * matrixLenght()+0);
+        return ramdom;
+    }
+    
+    public static void checkRandom(){
+        boolean checked = false;
+        do{
+            if(Matrix.getMatrixPosition(Matrix.randomRow(), Matrix.randomColumn()) != Cell.alive()){
+            Matrix.setStatus(Matrix.randomRow(), Matrix.randomColumn(), Cell.alive());
+            checked = true;
+        }else{
+            
+        }
+        }while(checked == false);
+       
+    }
+    
     public static void setStatus (int rows, int columns, String status){
         matrixClone[rows][columns]= status;
     }
