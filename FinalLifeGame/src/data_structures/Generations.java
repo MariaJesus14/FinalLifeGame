@@ -51,7 +51,9 @@ public class Generations {
         }
         return buttons3;
     }
-    
+    public static String getGeneration(int index){
+        return generations[index];
+    }
     public void chooseGeneration(){
         Object[] buttons4 = totalGenerations(Window_cell.getGenerations());
         Icon iconGene = new ImageIcon(getClass().getResource("/graphic_interface/generacion.jpg"));
