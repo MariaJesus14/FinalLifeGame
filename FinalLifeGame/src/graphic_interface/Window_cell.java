@@ -26,11 +26,9 @@ public class Window_cell {
 public void showGame (){
         nextGen();
         boolean exit = false;
-
-        int generations = generationsCount; 
-        String pastGeneration = "\nGeneracion anterior\n"+Generations.getGeneration(generations-2);  
-        String actualGeneration = "\nGeneracion actual\n"+Generations.getGeneration(generations-1);
-        String futureGeneration = "\nGeneracion siguiente\n"+Generations.getGeneration(generations);
+        String pastGeneration="";
+        String futureGeneration="";
+        String actualGeneration="";
         String generation0 = "\nGeneracion 0\n"+Generations.getGeneration(0);
         String generation1 = "\nGeneracion siguiente\n"+Generations.getGeneration(1);
   
@@ -42,7 +40,7 @@ public void showGame (){
              switch (option5) {
                  
          case 0:
-             if(generations == 2){
+             if(generationsCount == 2){
                  GestorEs.mostrarMensaje("No hay una generacion anterior a la generacion 0");
                  option5 = (int) JOptionPane.showOptionDialog(null, actualGeneration+"      "+futureGeneration, "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
              }else{
@@ -51,9 +49,13 @@ public void showGame (){
                  
              break;
          case 1:
+       
              nextGen();
+             pastGeneration = "\nGeneracion anterior\n"+Generations.getGeneration(Window_cell.generationsCount-2);  
+             actualGeneration = "\nGeneracion actual\n"+Generations.getGeneration(Window_cell.generationsCount-1);
+             futureGeneration = "\nGeneracion siguiente\n"+Generations.getGeneration(Window_cell.generationsCount);
              option5 = (int) JOptionPane.showOptionDialog(null, pastGeneration+"       "+actualGeneration+"      "+futureGeneration, "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
-             nextGen();
+            
              break;
          case 2:
              
@@ -74,13 +76,13 @@ public void showGame (){
         Cell.rule1();
         Cell.rule2();
         Matrix.matrixClone();
-        generationsCount +=1;
-        Generations.addGenerations(generationsCount, Matrix.printMatrix());
+        Window_cell.generationsCount +=1;
+        Generations.addGenerations(Window_cell.generationsCount, Matrix.printMatrix());
         Cell.rule1();
         Cell.rule2();
         Matrix.matrixClone();
-        generationsCount +=1;
-        Generations.addGenerations(generationsCount, Matrix.printMatrix());
+        Window_cell.generationsCount +=1;
+        Generations.addGenerations(Window_cell.generationsCount, Matrix.printMatrix());
         
     }
 /*

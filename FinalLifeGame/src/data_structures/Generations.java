@@ -23,9 +23,9 @@ public class Generations {
     
     
     public static void printGenerations (int generationNumber){
-        String pastGeneration = "\nGeneracion anterior\n"+generations[generationNumber-1];
-        String actualGeneration = "\nGeneracion actual\n"+generations[generationNumber];
-        String futureGeneration = "\nGeneracion siguiente\n"+generations[generationNumber+1];
+        String pastGeneration = "\nGeneracion anterior\n"+generations[generationNumber-2];
+        String actualGeneration = "\nGeneracion actual\n"+generations[generationNumber-1];
+        String futureGeneration = "\nGeneracion siguiente\n"+generations[generationNumber];
         String totalGenerations;
         
         if(generationNumber == 0){
