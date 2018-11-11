@@ -14,7 +14,7 @@ public class GestorEs {
  * @return retorna un mensaje por medio de JOptionPane
  * @param recibe un mensaje de tipo string
  */
-   public  void mostrarMensaje (String mensaje){
+   public static void mostrarMensaje (String mensaje){
        JOptionPane.showMessageDialog(null, mensaje);
    }
  /*

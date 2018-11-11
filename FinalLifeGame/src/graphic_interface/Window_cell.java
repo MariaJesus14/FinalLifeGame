@@ -4,6 +4,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import logical_model.Cell;
+import logical_model.Generations;
 import logical_model.Matrix;
 import logical_model.GestorEs;
 
@@ -60,20 +61,14 @@ public class Window_cell {
 
                     } else {
                         do {
-                            if (Cell.countGene <= 21) {
-                                Cell.rule1();
-                                Cell.rule2();
-                                Matrix.matrixClone();
-                                gestor.mostrarMensaje(Matrix.printMatrix());
-                            }
-
-                        } while (back != false);
-                        Cell.rule1();
-                        Cell.rule2();
-
-                        back = false;
-
+                            Cell.rule1();
+                            Cell.rule2();
+                            Matrix.matrixClone();
+                            Generations.addGenerations(generationsCount, Matrix.printMatrix());
+                            generationsCount +=1;
+                        } while (generationsCount <= 19);
                     }
+                    
                     break;
 
                 default:
