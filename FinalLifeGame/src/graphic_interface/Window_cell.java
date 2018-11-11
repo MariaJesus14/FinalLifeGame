@@ -18,7 +18,11 @@ public class Window_cell {
     private static int generationsCount = 0;
     Cell cell1= new Cell();
     GestorEs gestor = new GestorEs();
-
+/*
+ * getGenerations es el metodo encargado de obtener la genreacion
+ * @return retorna el contador de generaciones
+ * @param no recibe parametros
+ */
 
     public static int getGenerations() {
         return generationsCount;
