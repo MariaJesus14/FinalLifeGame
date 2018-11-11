@@ -120,26 +120,7 @@ public class Matrix {
            
         }
         return tabla;
-    }
-    
-   
-//    public static int[] lastNeighbor (int rowsCelula, int columnsCelula){
-//        int[] array = new int[2];
-//        rowsCelula = rowsCelula+1;
-//        columnsCelula = columnsCelula+1;
-//        for (int rows = rowsCelula; rows > rowsCelula-3; rows--) {
-//            for (int columns = columnsCelula; columns > columnsCelula-3; columns--) {
-//                if(rows >= matrixLenght() || columns >= matrixLenght()){
-//                }else{
-//                 arrayDatos[2] = rows;
-//                 arrayDatos[3] = columns;
-//                 return arrayDatos;                
-//                }
-//            }
-//        }
-//        
-//        return arrayDatos;
-//    }   
+    }  
 
  
     public static void matrixClone(){

@@ -58,7 +58,7 @@ public class Generations {
         }while(1 == 1);
     }
     public void showGame (){
-        String buttons2[] = {"Retroceder", "Siguiente"};
+        String buttons2[] = {"Retroceder", "Siguiente","Finalizar"};
         Icon iconContinue = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
         int option2 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
      switch (option2) {

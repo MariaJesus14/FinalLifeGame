@@ -123,23 +123,7 @@ public class Cell {
         }
 
     }
-//     public static int[] starterNeighbor (int rowsCelula, int columnsCelula){
-//        int[] array = new int[2];
-//        rowsCelula = rowsCelula-1;
-//        columnsCelula = columnsCelula-1;
-//        for (int rows = rowsCelula; rows < rowsCelula+3; rows++) {
-//            for (int columns = columnsCelula; columns < columnsCelula+3; columns++) {
-//                if(rows < 0 || columns < 0){
-//                }else{
-//                 arrayDatos[0] = rows;
-//                 arrayDatos[1] = columns;
-//
-//                 return arrayDatos;                
-//                }
-//            }
-//        }
-//        return arrayDatos;
-//    }   
+ 
     
     public static int[] neighborHood(int rowsCell, int columnsCell){
         int rC=rowsCell;
@@ -263,100 +247,6 @@ public class Cell {
         
     }
     
-    
-//    public void printGenerations (int generations){
-//        switch(generations){
-//            case 0:
-//                gestor.mostrarMensaje(dead);
-//                break;
-//            case 1:
-//                break;
-//            default:
-//                break;
-//        }
-//    }
-//    
-//    public String[] totalGenerations(int generations){
-//        String[] buttons3 = new String[generations];
-//        String number = "";
-//        for (int i = 0; i < 10; i++) {
-//            number = number +i;
-//            buttons3[i] = number;
-//        }
-//        return buttons3;
-//    }
-//    
-//    public void Generations() {
-//
-//        //String[] buttons3 = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19"};
-//        String[] buttons4 = totalGenerations(Window_cell.getGenerations());
-//        Icon iconGene = new ImageIcon(getClass().getResource("/graphic_interface/generacion.jpg"));
-//        boolean continue1 = true;
-//        while (continue1) {
-//            String option2 = (String) JOptionPane.showInputDialog(null, "Seleccione la generacion que desea observar", "Generacion", JOptionPane.INFORMATION_MESSAGE, iconGene, buttons4, buttons4[0]);
-//            switch (option2) {
-//                case "0":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "1":
-//                     JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "2":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "3":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "4":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "5":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "6":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "7":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "8":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "9":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "10":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "11":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "12":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "13":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "14":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "15":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "16":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "17":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "18":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//                case "29":
-//                    JOptionPane.showMessageDialog(null, generations[countGene] );
-//                    break;
-//            }
-//        }
-//    }
+
 
 }
