@@ -35,7 +35,7 @@ public class Matrix {
     }
  /*
  * matrix_size es un metodo que le asigna a la matriz el tamaño que  el usuario desee
- * @return no retorna nada
+ * @return es void, por lo tanto no retorna nada
  * @param recibe un numero tanto para las filas como para las columnas
  */
     public static void matrix_size(int size){
@@ -47,14 +47,14 @@ public class Matrix {
  * @return retorna la longitud de la matriz
  * @param no recibe parametros
  */
-    
+     
     public static int matrixLenght (){
         return matrixGame.length;
         
     }
  /*
- * createCells es un metodo que muestra la celula en la mtriz en su estado de muerta
- * @return res void, por lo tanto no retorna nada
+ * createCells es un metodo que muestra la celula en la matriz en su estado de muerta
+ * @return es void, por lo tanto no retorna nada
  * @param no recibe parametros
  */
     public static void createCells (){
@@ -66,6 +66,11 @@ public class Matrix {
             }
         }
     }
+ /*
+ * createCellsClone es un metodo similar al anterior, muestra la celula en una nueva matriz en su estado de muerta
+ * @return es void, por lo tanto no retorna nada
+ * @param no recibe parametros
+ */
     public static void createCellsClone (){
         for (int i = 0; i < matrixClone.length; i++) {
             for (int j = 0; j < matrixClone.length; j++) {
@@ -74,13 +79,19 @@ public class Matrix {
             }
         }
     }
-    
-   
+/*
+ * getMatrixPosition es un metodo que obtiene la matriz segun la fila y columna que se ingresa
+ * @return retorna la matriz en la posicion de la columna y la fila ingresada
+ * @param recibe la fila y la columna
+ */
     public static String getMatrixPosition(int rows, int columns){
         return matrixGame[rows][columns];
     }
-    
-    
+ /*
+ * addCell es un metodo que se encarga de agregar la celula en la posicion ingresada
+ * @return es void, por lo tanto no retorna nada
+ * @param recibe la fila y la columna para agregar la celula viva
+ */    
     
     public static void addCell (int row, int colunm){
         if(row <0 && colunm <0){
@@ -113,11 +124,19 @@ public class Matrix {
         }while(checked == false);
        
     }
-    
+ /*
+ * setStatus es un metodo que se encarga de asignarle a la celula el estado de viva o muerta
+ * @return es void, por lo tanto no retorna nada
+ * @param recibe la fila y la columna y el estado de la celula
+ */   
     public static void setStatus (int rows, int columns, String status){
         matrixClone[rows][columns]= status;
     }
-    
+ /*
+ * printMatrix es un metodo que se encarga mostrar la matriz con celulas muertas en pantalla
+ * @return es void, por lo tanto no retorna nada
+ * @param no recibe parametros
+ */       
     public static String printMatrix (){
         String tabla = "";
         for (int fila = 0; fila < matrixGame.length; fila++) {
@@ -131,6 +150,11 @@ public class Matrix {
         }
         return tabla;
     }
+ /*
+ * printMatrixClone es un metodo similar al anterior, muestra la nueva matriz con celulas muertas en pantalla
+ * @return es void, por lo tanto no retorna nada
+ * @param no recibe parametros
+ */ 
     public static String printMatrixClone (){
         String tabla = "";
         for (int fila = 0; fila < matrixClone.length; fila++) {
@@ -144,7 +168,11 @@ public class Matrix {
         }
         return tabla;
     }  
-
+ /*
+ * matrixClone es un metodo que le asigna a la nueva matriz los valores de la vieja matriz
+ * @return es void, por lo tanto no retorna nada
+ * @param no recibe parametros
+ */ 
  
     public static void matrixClone(){
         for (int i = 0; i < matrixClone.length; i++) {
@@ -154,13 +182,7 @@ public class Matrix {
             }
         }
     }
-//    public static void positionRandom(){
-//        for (int x=0; x < matrixGame.length; x++) {
-//        for (int y=0; y < matrixGame[x].length; y++) {
-//        matrixClone[x][y] = (int) (Math.random()*9+1);
-//  }
-//}
-//    }
+
 
         
 }
