@@ -4,9 +4,9 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import logical_model.Cell;
-import logical_model.Generations;
+import data_structures.Generations;
 import data_structures.Matrix;
-import logical_model.GestorEs;
+import data_structures.GestorEs;
 
 /**
  * @author Jerry Rivera
@@ -53,10 +53,10 @@ public class Window_cell {
                         int option1 = (int) JOptionPane.showInputDialog(null, "Seleccione la posicion de la fila en la que desea agregar la celula", "Seleccion de posicion", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons3, buttons3[0]);
                         int option3 = (int) JOptionPane.showInputDialog(null, "Seleccione la posicion de la columna en la que desea agregar la celula", "Seleccion de posicion", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons3, buttons3[0]);
                         if (option1 >= Matrix.matrixLenght() || option3 >= Matrix.matrixLenght()) {
-                            gestor.mostrarMensaje("Datos invalidos el numero ingresado supera la dimension de la matriz");
+                            GestorEs.mostrarMensaje("Datos invalidos el numero ingresado supera la dimension de la matriz");
                         } else if(option1 < Matrix.matrixLenght() && option3 < Matrix.matrixLenght()){
                             Matrix.addCell(option1, option3);
-                            gestor.mostrarMensaje(Matrix.printMatrix());
+                            GestorEs.mostrarMensaje(Matrix.printMatrix());
                         }
 
                     } else {

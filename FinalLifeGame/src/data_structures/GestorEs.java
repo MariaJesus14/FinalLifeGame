@@ -1,5 +1,5 @@
 
-package logical_model;
+package data_structures;
 
 import javax.swing.JOptionPane;
 

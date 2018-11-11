@@ -5,7 +5,7 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import data_structures.Matrix;
-import logical_model.GestorEs;
+import data_structures.GestorEs;
 
 /**
  *@author Jerry Rivera

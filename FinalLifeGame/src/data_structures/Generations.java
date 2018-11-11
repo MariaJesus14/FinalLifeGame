@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package logical_model;
+package data_structures;
 
 import graphic_interface.Window_cell;
 import javax.swing.Icon;

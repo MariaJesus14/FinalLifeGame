@@ -2,6 +2,7 @@
 package logical_model;
 
 
+import data_structures.GestorEs;
 import data_structures.Matrix;
 import static data_structures.Matrix.matrixLenght;
 
