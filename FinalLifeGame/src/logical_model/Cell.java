@@ -58,7 +58,7 @@ public class Cell {
                 if (Matrix.getMatrixPosition(rows, columns).equals(Cell.dead())) {
                     alive = 0;
                     neighborHood(rows, columns);
-                    distanciaVecinos();
+                    neighborDistance();
                     for (vecinoInicialFila = getArrayDatosPosition(0); vecinoInicialFila < getArrayDatosPosition(5); vecinoInicialFila++) {
                         for (vecinoInicialColumna = getArrayDatosPosition(1); vecinoInicialColumna < getArrayDatosPosition(6); vecinoInicialColumna++) {
                             if (Matrix.getMatrixPosition(vecinoInicialFila, vecinoInicialColumna).equals(Cell.alive())) {
@@ -81,6 +81,14 @@ public class Cell {
         //GestorEs.mostrarMensaje("\nCount\n"+Matrix.printMatrix());
 
         }
+     /*
+ * getArrayDatosPosition es el metodo encargado de generar obtener los datos de la posicion del arreglo
+ * @return retorna los datos del arreglo en la posicion index
+ * @param recibe un int que es la posicion que se quiere obtener
+ */
+       public static int getArrayDatosPosition (int index){
+        return arrayDatos[index];
+    }
 /*
  * rule2 es el metodo encargado de ejecutar la regla numero dos del juego 
  *Una célula viva con 2 o 3 células vecinas vivas sigue viva, en otro caso muere (por "soledad" o
@@ -88,9 +96,7 @@ public class Cell {
  * @return es void, por lo tanto no retorna nada
  * @param no recibe parametros
  */
-     public static int getArrayDatosPosition (int index){
-        return arrayDatos[index];
-    }
+  
     public static void rule2() {
         int alive;
         int vecinoInicialFila;
@@ -101,7 +107,7 @@ public class Cell {
                 if (Matrix.getMatrixPosition(rows, columns).equals(Cell.alive())) {
                     alive = -1;
                     neighborHood(rows, columns);
-                    distanciaVecinos();
+                    neighborDistance();
                     for (vecinoInicialFila = getArrayDatosPosition(0); vecinoInicialFila < getArrayDatosPosition(5); vecinoInicialFila++) {
                         for (vecinoInicialColumna = getArrayDatosPosition(1); vecinoInicialColumna < getArrayDatosPosition(6); vecinoInicialColumna++) {
                             if (Matrix.getMatrixPosition(vecinoInicialFila, vecinoInicialColumna).equals(Cell.alive())) {
@@ -123,7 +129,11 @@ public class Cell {
         }
 
     }
- 
+ /*
+ * neighborHood es el metodo que obtiene las vecinas de la celula viva  
+ * @return retorna el vector
+ * @param recibe un entero para las columnas de la matriz y otro para las filas
+ */
     
     public static int[] neighborHood(int rowsCell, int columnsCell){
         int rC=rowsCell;
@@ -220,7 +230,12 @@ public class Cell {
           
         return arrayDatos;
     }
-       public static void distanciaVecinos(){
+ /*
+ * distanciaVecinos es el metodo que se encarga de medir la distancia entre cada vecino de la celula 
+ * @return es void, por lo tanto no retorna nada
+ * @param no recibe parametros
+ */
+       public static void neighborDistance(){
         int distancia1;
         int distancia2;
         distancia1 = arrayDatos[0]-arrayDatos[2];

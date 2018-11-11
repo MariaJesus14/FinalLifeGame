@@ -30,6 +30,7 @@ public class Window_cell {
         return generationsCount;
     }
 public void showGame (){
+
         boolean exit = false;
         String pastGeneration;
         int generations = generationsCount-1;
@@ -40,12 +41,15 @@ public void showGame (){
         }
         String actualGeneration = "\nGeneracion actual"+Generations.getGeneration(generations);
         String futureGeneration = "Generacion siguiente"+Generations.getGeneration(generations+1);
+
         String totalGenerations;
         String buttons5[] = {"Retroceder", "Siguiente","Finalizar"};
+
         Icon iconGne = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
          int option5 = (int) JOptionPane.showOptionDialog(null, actualGeneration+"///"+futureGeneration, "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
          do{
              switch (option5) {
+
          case 0:
              option5 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
              break;
