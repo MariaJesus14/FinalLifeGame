@@ -101,17 +101,30 @@ public class Matrix {
             
         }
     }
-    
+/*
+ * randomRow es un metodo que se encarga de generar numeros aleatoreos para las filas
+ * @return retorna el numero al azar
+ * @param no recibe parametros
+ */ 
     public static int randomRow (){
         int ramdom = (int)(Math.random() * matrixLenght()+0);
         return ramdom;
     }
-    
+/*
+ * randomColumn es un metodo que se encarga de generar numeros aleatoreos para las columnas
+ * @return retorna el numero al azar
+ * @param no recibe parametros
+ */     
     public static int randomColumn (){
         int ramdom = (int)(Math.random() * matrixLenght()+0);
         return ramdom;
     }
-    
+ /*
+ * checkRandom es un metodo que se encarga revisar si el numero de las filas
+ * y las columnas esta dentro de la matriz seleccionada
+ * @return es void, por lo tanto no retorna nada
+ * @param no recibe parametros
+ */     
     public static void checkRandom(){
         boolean checked = false;
         do{

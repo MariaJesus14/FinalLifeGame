@@ -19,13 +19,7 @@ public class Window_cell {
     Cell cell1= new Cell();
     GestorEs gestor = new GestorEs();
 
-    /*
- * cell es el metodo encargado de generara las celulas aleatoria o manualmente, segun el usuario prefiera
- * @return Es void, por lo tanto no retorna
- * @param no recibe parametros
-<<<<<<< HEAD
- */
-    
+
     public static int getGenerations() {
         return generationsCount;
     }
@@ -39,14 +33,14 @@ public void showGame (){
         }else{
            pastGeneration = "Generacion anterior"+Generations.getGeneration(generations);
         }
-        String actualGeneration = "\nGeneracion actual"+Generations.getGeneration(generations);
-        String futureGeneration = "Generacion siguiente"+Generations.getGeneration(generations+1);
+        String actualGeneration = "\nGeneracion actual\n"+Generations.getGeneration(generations);
+        String futureGeneration = "Generacion siguiente\n"+Generations.getGeneration(generations+1);
 
         String totalGenerations;
         String buttons5[] = {"Retroceder", "Siguiente","Finalizar"};
 
         Icon iconGne = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
-         int option5 = (int) JOptionPane.showOptionDialog(null, actualGeneration+"///"+futureGeneration, "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
+         int option5 = (int) JOptionPane.showOptionDialog(null, actualGeneration+futureGeneration, "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
          do{
              switch (option5) {
 
@@ -62,7 +56,12 @@ public void showGame (){
             }
          }while(exit == false);
     }
-    
+/*
+ * cell es el metodo encargado de generara las celulas aleatoria o manualmente, segun el usuario prefiera
+ * @return Es void, por lo tanto no retorna
+ * @param no recibe parametros
+ */
+     
 
     public void cell() {
 
@@ -77,7 +76,7 @@ public void showGame (){
         while (back == true) {
             switch (option) {
                 case "Aleatoreamente":
-                    int option6 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
+                    int option6 = (int) JOptionPane.showOptionDialog(null, "Seleccione Agregar para mas celulas,o Jugar si ya no quiere agregar mas ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
                     if (option6 == 0) {
                     Matrix.addCell(Matrix.randomColumn(), Matrix.randomRow());
                     Matrix.checkRandom();
@@ -86,12 +85,13 @@ public void showGame (){
                           Cell.rule1();
                           Cell.rule2();
                           Matrix.matrixClone();
+                          GestorEs.mostrarMensaje(Matrix.printMatrix());
                     }
                         
                     break;
                 case "Manualmente":
 
-                    int option2 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
+                    int option2 = (int) JOptionPane.showOptionDialog(null, "Seleccione Agregar para mas celulas,o Jugar si ya no quiere agregar mas ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
                     if (option2 == 0) {
                         int option1 = (int) JOptionPane.showInputDialog(null, "Seleccione la posicion de la fila en la que desea agregar la celula", "Seleccion de posicion", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons3, buttons3[0]);
                         int option3 = (int) JOptionPane.showInputDialog(null, "Seleccione la posicion de la columna en la que desea agregar la celula", "Seleccion de posicion", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons3, buttons3[0]);
