@@ -62,6 +62,12 @@ public class Generations {
         String buttons2[] = {"Retroceder", "Siguiente"};
         Icon iconContinue = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
         int option2 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
+     switch (option2) {
+         case 0:
+             break;
+         case 1:
+             break;
+      }
     }
     
 //    public void Generations() {
