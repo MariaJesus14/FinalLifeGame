@@ -9,7 +9,7 @@ import graphic_interface.Window_cell;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import static logical_model.Cell.countGene;
+
 
 /**
  *
@@ -24,24 +24,23 @@ public class Generations {
         String actualGeneration = "\nGeneracion actual\n"+generations[generationNumber];
         String futureGeneration = "\nGeneracion siguiente\n"+generations[generationNumber+1];
         String totalGenerations;
-        switch(generationNumber){
-            case 0:
-                totalGenerations = actualGeneration +"////"+ futureGeneration;
-                GestorEs.mostrarMensaje(totalGenerations);
-                break;
-            case 20:
-                totalGenerations = pastGeneration+"////"+actualGeneration ;
-                GestorEs.mostrarMensaje(totalGenerations);
-                break;
-            default:
-                totalGenerations = pastGeneration+"////"+actualGeneration +"////"+ futureGeneration;
-                GestorEs.mostrarMensaje(totalGenerations);
-                break;
+        
+        if(generationNumber == 0){
+            totalGenerations = actualGeneration +"////"+ futureGeneration;
+            GestorEs.mostrarMensaje(totalGenerations); 
+        }if(generationNumber == Window_cell.getGenerations()){
+            totalGenerations = pastGeneration+"////"+actualGeneration ;
+            GestorEs.mostrarMensaje(totalGenerations);
+        }else{
+           totalGenerations = pastGeneration+"////"+actualGeneration +"////"+ futureGeneration;
+           GestorEs.mostrarMensaje(totalGenerations); 
         }
     }
+    
     public static void addGenerations(int index, String generation){
         generations[index] = generation;
     }
+    
     public Object[] totalGenerations(int generations){
         Object[] buttons3 = new Object[generations];
         for (int i = 0; i < 10; i++) {
@@ -49,7 +48,6 @@ public class Generations {
         }
         return buttons3;
     }
-    
     
     public void chooseGeneration(){
         Object[] buttons4 = totalGenerations(Window_cell.getGenerations());
