@@ -288,6 +288,13 @@ public class Matrix {
             }
         }
     }
+//    public static void positionRandom(){
+//        for (int x=0; x < matrixGame.length; x++) {
+//        for (int y=0; y < matrixGame[x].length; y++) {
+//        matrixClone[x][y] = (int) (Math.random()*9+1);
+//  }
+//}
+//    }
 
         
 }

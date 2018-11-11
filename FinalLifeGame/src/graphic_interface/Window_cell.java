@@ -44,7 +44,7 @@ public class Window_cell {
         while (back == true) {
             switch (option) {
                 case "Aleatoreamente":
-
+                    
                     break;
                 case "Manualmente":
 
@@ -52,9 +52,9 @@ public class Window_cell {
                     if (option2 == 0) {
                         int option1 = (int) JOptionPane.showInputDialog(null, "Seleccione la posicion de la fila en la que desea agregar la celula", "Seleccion de posicion", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons3, buttons3[0]);
                         int option3 = (int) JOptionPane.showInputDialog(null, "Seleccione la posicion de la columna en la que desea agregar la celula", "Seleccion de posicion", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons3, buttons3[0]);
-                        if (option1 > Matrix.matrixLenght() && option3 > Matrix.matrixLenght()) {
+                        if (option1 >= Matrix.matrixLenght() || option3 >= Matrix.matrixLenght()) {
                             gestor.mostrarMensaje("Datos invalidos el numero ingresado supera la dimension de la matriz");
-                        } else {
+                        } else if(option1 < Matrix.matrixLenght() && option3 < Matrix.matrixLenght()){
                             Matrix.addCell(option1, option3);
                             gestor.mostrarMensaje(Matrix.printMatrix());
                         }
