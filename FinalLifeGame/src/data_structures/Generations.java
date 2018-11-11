@@ -12,12 +12,15 @@ import javax.swing.JOptionPane;
 
 
 /**
- *
- * @author Jerry
+ *@author Jerry Rivera
+ * @author Roibin Elizondo
+ * @author Maria Rodriguez
  */
 public class Generations {
     GestorEs gestor = new GestorEs();
     private  static String[] generations= new String[20];
+    private int indexGeneration;
+    
     
     public static void printGenerations (int generationNumber){
         String pastGeneration = "\nGeneracion anterior\n"+generations[generationNumber-1];
@@ -56,17 +59,6 @@ public class Generations {
             int option2 = (int) JOptionPane.showInputDialog(null, "Seleccione la generacion que desea observar", "Generacion", JOptionPane.INFORMATION_MESSAGE, iconGene, buttons4, buttons4[0]);
             Generations.printGenerations(option2);
         }while(1 == 1);
-    }
-    public void showGame (){
-        String buttons2[] = {"Retroceder", "Siguiente","Finalizar"};
-        Icon iconContinue = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
-        int option2 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
-     switch (option2) {
-         case 0:
-             break;
-         case 1:
-             break;
-      }
     }
     
 }

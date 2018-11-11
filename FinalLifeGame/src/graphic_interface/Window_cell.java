@@ -29,7 +29,22 @@ public class Window_cell {
     public static int getGenerations() {
         return generationsCount;
     }
-
+public void showGame (){
+        String buttons5[] = {"Retroceder", "Siguiente","Finalizar"};
+        Icon iconGne = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
+         int option5 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
+       
+         switch (option5) {
+         case 0:
+             break;
+         case 1:
+             break;
+         case 2:
+             
+             break;
+      }
+    }
+    
 
     public void cell() {
 
@@ -40,7 +55,7 @@ public class Window_cell {
         Icon iconCell = new ImageIcon(getClass().getResource("/graphic_interface/iconCell.jpg"));
         Icon iconContinue = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
         String option = (String) JOptionPane.showInputDialog(null, "Seleccione la forma mediante la cual desea generar las celulas ", "Seleccion de celulas", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons, buttons[0]);
-
+        
         while (back == true) {
             switch (option) {
                 case "Aleatoreamente":
