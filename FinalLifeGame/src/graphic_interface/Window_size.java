@@ -4,8 +4,7 @@ package graphic_interface;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
-import logical_model.Cell;
-import logical_model.Matrix;
+import data_structures.Matrix;
 import logical_model.GestorEs;
 
 /**
