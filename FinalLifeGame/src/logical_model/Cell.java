@@ -75,11 +75,7 @@ public class Cell {
 
                 }
             }
-
         }
-        
-        //GestorEs.mostrarMensaje("\nCount\n"+Matrix.printMatrix());
-
         }
      /*
  * getArrayDatosPosition es el metodo encargado de generar obtener los datos de la posicion del arreglo
