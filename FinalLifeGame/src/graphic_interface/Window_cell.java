@@ -31,8 +31,8 @@ public class Window_cell {
     }
 public void showGame (){
         String pastGeneration = "\nGeneracion anterior\n"+Generations.getGeneration(generationsCount-1);
-        String actualGeneration = "\nGeneracion actual\n"+Generations.getGeneration(generationsCount);;
-        String futureGeneration = "\nGeneracion siguiente\n"+Generations.getGeneration(generationsCount+1);;
+        String actualGeneration = "\nGeneracion actual\n"+Generations.getGeneration(generationsCount);
+        String futureGeneration = "\nGeneracion siguiente\n"+Generations.getGeneration(generationsCount+1);
         String totalGenerations;
         String buttons5[] = {"Retroceder", "Siguiente","Finalizar"};
         Icon iconGne = new ImageIcon(getClass().getResource("/graphic_interface/project-management.jpg"));
