@@ -57,6 +57,12 @@ public class Generations {
             Generations.printGenerations(option2);
         }while(1 == 1);
     }
+    public void Generatios (){
+        boolean back = true;
+        String buttons2[] = {"Retroceder", "Siguiente"};
+        Icon iconContinue = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
+        int option2 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
+    }
     
 //    public void Generations() {
 //
