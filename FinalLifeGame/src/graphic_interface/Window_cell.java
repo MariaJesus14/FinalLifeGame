@@ -77,7 +77,17 @@ public void showGame (){
         while (back == true) {
             switch (option) {
                 case "Aleatoreamente":
-                    
+                    int option6 = (int) JOptionPane.showOptionDialog(null, "Seleccione ", "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconContinue, buttons2, buttons2[0]);
+                    if (option6 == 0) {
+                    Matrix.addCell(Matrix.randomColumn(), Matrix.randomRow());
+                    Matrix.checkRandom();
+                    GestorEs.mostrarMensaje(Matrix.printMatrix());
+                    }else{
+                          Cell.rule1();
+                          Cell.rule2();
+                          Matrix.matrixClone();
+                    }
+                        
                     break;
                 case "Manualmente":
 
