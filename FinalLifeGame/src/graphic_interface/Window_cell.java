@@ -58,7 +58,7 @@ public void showGame (){
              pastGeneration = "\nGeneracion anterior\n"+Generations.getGeneration(Window_cell.generationsCount-2);  
              actualGeneration = "\nGeneracion actual\n"+Generations.getGeneration(Window_cell.generationsCount-1);
              futureGeneration = "\nGeneracion siguiente\n"+Generations.getGeneration(Window_cell.generationsCount);
-             option5 = (int) JOptionPane.showOptionDialog(null, pastGeneration+"       "+actualGeneration+"      "+futureGeneration, "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
+             option5 = (int) JOptionPane.showOptionDialog(null, pastGeneration+"+        "+actualGeneration+"      "+futureGeneration, "Continuar", JOptionPane.INFORMATION_MESSAGE, JOptionPane.YES_NO_CANCEL_OPTION, iconGne, buttons5, buttons5[0]);
             
              break;
          case 2:
