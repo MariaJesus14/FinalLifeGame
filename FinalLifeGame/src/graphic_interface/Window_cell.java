@@ -103,7 +103,7 @@ public void showGame (){
         Object buttons3[] = {0 ,1 ,2 ,3 ,4 ,5 ,6 ,7 ,8 ,9 ,10 ,11 ,12 ,13 ,14 ,15 ,16 ,17 ,18 ,19 };
         Icon iconCell = new ImageIcon(getClass().getResource("/graphic_interface/iconCell.jpg"));
         Icon iconContinue = new ImageIcon(getClass().getResource("/graphic_interface/images.jpg"));
-        String option = (String) JOptionPane.showInputDialog(null, "Seleccione la forma mediante la cual desea generar las celulas ", "Seleccion de celulas", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons, buttons[0]);
+        String option = (String) JOptionPane.showInputDialog(null, "Seleccione la forma mediante la cual desea g96963+nerar las celulas ", "Seleccion de celulas", JOptionPane.INFORMATION_MESSAGE, iconCell, buttons, buttons[0]);
         
         while (back == true) {
             switch (option) {
